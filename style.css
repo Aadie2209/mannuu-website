@@ -83,3 +83,18 @@ body.vibe {
   cursor: pointer;
   z-index: 1000;
 }
+.nav-buttons {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.nav-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: white;
+  color: #ff4081;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
