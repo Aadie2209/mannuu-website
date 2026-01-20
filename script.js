@@ -1,20 +1,23 @@
-const songs = ["music1.mp3", "music2.mp3"];
-let currentSong = 0;
+// Countdown to Mannuu's birthday
+const birthday = new Date("January 23, 2026 00:00:00").getTime();
 
-const audio = new Audio(songs[currentSong]);
-audio.volume = 0.5;
+setInterval(() => {
+  const now = new Date().getTime();
+  const diff = birthday - now;
 
-const musicBtn = document.getElementById("musicBtn");
-if (musicBtn) {
-  musicBtn.addEventListener("click", () => {
-    audio.play();
-  });
-}
-
-audio.addEventListener("ended", () => {
-  currentSong++;
-  if (currentSong < songs.length) {
-    audio.src = songs[currentSong];
-    audio.play();
+  if (diff > 0) {
+    document.getElementById("days").innerText =
+      Math.floor(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("hours").innerText =
+      Math.floor((diff / (1000 * 60 * 60)) % 24);
+    document.getElementById("minutes").innerText =
+      Math.floor((diff / (1000 * 60)) % 60);
+    document.getElementById("seconds").innerText =
+      Math.floor((diff / 1000) % 60);
   }
-});
+}, 1000);
+
+// Button navigation
+function goCelebrate() {
+  window.location.href = "celebrate.html";
+}
