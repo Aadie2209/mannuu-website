@@ -8,9 +8,10 @@ body {
 /* ===== REEL VIBE PAGE ===== */
 
 body.vibe {
-  background: #0f0f0f;
-  color: #f2f2f2;
-  font-family: Georgia, serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+  color: #3a3a3a;
+  font-family: 'Georgia', serif;
+  overflow-x: hidden;
 }
 
 .scene {
@@ -48,4 +49,24 @@ body.vibe {
 
 @keyframes fadeIn {
   to { opacity: 1; }
+}
+
+.confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, #ff4081 2px, transparent 2px),
+    radial-gradient(circle, #ffd700 2px, transparent 2px),
+    radial-gradient(circle, #7c4dff 2px, transparent 2px);
+  background-size: 50px 50px;
+  animation: moveConfetti 10s linear infinite;
+}
+
+@keyframes moveConfetti {
+  from { background-position: 0 0; }
+  to { background-position: 0 100vh; }
 }
