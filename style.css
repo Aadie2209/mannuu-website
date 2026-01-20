@@ -5,3 +5,47 @@ body {
   text-align: center;
   padding-top: 50px;
 }
+/* ===== REEL VIBE PAGE ===== */
+
+body.vibe {
+  background: #0f0f0f;
+  color: #f2f2f2;
+  font-family: Georgia, serif;
+}
+
+.scene {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.text {
+  font-size: 22px;
+  max-width: 600px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.fade {
+  width: 260px;
+  border-radius: 20px;
+  opacity: 0;
+  animation: fadeIn 2.5s forwards;
+}
+
+/* Delays for slow reel feel */
+.delay1 { animation-delay: 1s; }
+.delay2 { animation-delay: 3s; }
+.delay3 { animation-delay: 5s; }
+.delay4 { animation-delay: 7s; }
+.delay5 { animation-delay: 9s; }
+.delay6 { animation-delay: 11s; }
+.delay7 { animation-delay: 13s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
